@@ -1,3 +1,24 @@
+"""
+This script provides functionalities to:
+1. Convert an image containing tabular data into a pandas DataFrame.
+2. Summarize the contents of a DataFrame using the OpenAI Chat Completion API.
+
+Key Libraries Used:
+- pytesseract: Extracts text from images.
+- PIL (Python Imaging Library): Opens and manipulates images.
+- openai: Communicates with the OpenAI API to generate text-based outputs.
+- pandas: Manages and manipulates structured data in DataFrame format.
+
+The `image_to_dataframe` function processes an image file to extract text, cleans and structures the text, and then 
+returns a pandas DataFrame. The `summarize_dataframe` function takes this DataFrame, converts it to a string 
+representation, and requests a summary from the OpenAI Chat Completion API.
+
+Usage:
+Set the desired image path in the 'img_path' variable and run the script to get both the DataFrame representation 
+and its summary.
+"""
+
+
 import pytesseract
 from PIL import Image
 import json
